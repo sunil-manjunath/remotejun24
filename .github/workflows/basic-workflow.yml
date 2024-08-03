@@ -4,7 +4,7 @@ run-name: Testing our Github actions
 on: [push]
 env:
   owner_name: Sunil
-  owner_variable: {{ var.MY_REPO_VAR }} 
+  # owner_variable: {{ var.MY_REPO_VAR }} 
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
