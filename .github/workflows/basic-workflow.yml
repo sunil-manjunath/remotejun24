@@ -2,9 +2,11 @@ name: GitHub actions demo
 run-name: Testing our Github actions
 
 on: [push]
-
+env:
+  owner_name: Sunil
+  owner_variable: {{ var.MY_REPO_VAR }} 
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job basic_workflow is executing as part of new workflow"
+      - run: echo "Job basic_workflow is executing as part of new workflow- Owner:$owner_name and with owner variable value as : $owner_variable "
